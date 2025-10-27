@@ -1,8 +1,10 @@
 import 'dart:io';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:soqsoq/helpers/navigate_to_helper.dart';
+import 'package:soqsoq/main.dart';
 
 import '../../models/user_info.dart';
 import '../components/app_textformField.dart';
@@ -30,6 +32,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Row(
+          children: [ ElevatedButton(onPressed: (){
+            context.setLocale(Locale('en'));
+          }, child: Text("En")),ElevatedButton(onPressed: (){
+            context.setLocale(Locale('en'));
+    }, child: Text("Ar"),
+        ),]
+      )
+    ),
       appBar: AppBar(
         title: const Text("Register", style: TextStyle(fontWeight: FontWeight.bold)),
         centerTitle: true,

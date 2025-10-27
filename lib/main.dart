@@ -1,13 +1,18 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:soqsoq/core/theme/app_them.dart';
 import 'package:soqsoq/core/views/screens/home_screen.dart';
 import 'package:soqsoq/core/views/screens/login_screen.dart';
 import 'package:soqsoq/core/views/screens/notfound_404.dart';
 import 'package:soqsoq/helpers/route_manager.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   await GetStorage.init();
-  runApp(const MyApp());
+  runApp(EasyLocalization(child: MyApp(), supportedLocales:
+  [Locale('en'),Locale("ar")], path: 'assets/translation'));
 }
 
 class MyApp extends StatelessWidget {
@@ -18,9 +23,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //initialRoute: "/login",
+      localizationsDelegates: context.localizationDelegates,
+      locale: context.locale,
       onGenerateRoute: RouteManager.generateRoutes,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: false),
+      themeMode: AppTheme.ToggleTheme(),
+      darkTheme: AppTheme.dark,
+      theme: AppTheme.light,
       home: HomeScreen(),
     );
   }
@@ -67,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar

@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+
         actions: [
           authVM.checkAuth()
               ? IconButton(
@@ -58,6 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: AppColors.primaryColor,
       ),
       drawer: Drawer(
+
         child: Column(
           // padding: EdgeInsets.zero,
           children: [

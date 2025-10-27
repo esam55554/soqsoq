@@ -40,6 +40,8 @@ dependencies:
   calendar_date_picker2: ^2.0.1
   dio: ^5.9.0
   get_storage: ^2.1.1
+  easy_localization: ^3.0.8
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -56,11 +58,13 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+ assets:
+   - assets/translation/
+   - assets/fonts/
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+  #uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
   # assets:
