@@ -5,6 +5,9 @@ import 'package:soqsoq/core/theme/app_them.dart';
 import 'package:soqsoq/core/views/screens/home_screen.dart';
 import 'package:soqsoq/core/views/screens/login_screen.dart';
 import 'package:soqsoq/core/views/screens/notfound_404.dart';
+import 'package:soqsoq/core/views/screens/product_screen.dart';
+import 'package:soqsoq/core/views/screens/product_screen_manager.dart';
+import 'package:soqsoq/core/views/screens/registration_screen.dart';
 import 'package:soqsoq/helpers/route_manager.dart';
 
 void main() async {
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
       themeMode: AppTheme.ToggleTheme(),
       darkTheme: AppTheme.dark,
       theme: AppTheme.light,
-      home: HomeScreen(),
+      home: RegistrationScreen(),
     );
   }
 }
