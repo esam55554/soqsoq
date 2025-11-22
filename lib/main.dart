@@ -2,11 +2,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:soqsoq/core/theme/app_them.dart';
-import 'package:soqsoq/core/views/screens/home_screen.dart';
-import 'package:soqsoq/core/views/screens/login_screen.dart';
-import 'package:soqsoq/core/views/screens/notfound_404.dart';
-import 'package:soqsoq/core/views/screens/product_screen.dart';
-import 'package:soqsoq/core/views/screens/product_screen_manager.dart';
 import 'package:soqsoq/core/views/screens/registration_screen.dart';
 import 'package:soqsoq/helpers/route_manager.dart';
 
