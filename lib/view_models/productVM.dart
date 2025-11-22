@@ -1,9 +1,5 @@
-import 'package:dio/dio.dart';
-import 'package:soqsoq/models/product_api_repo.dart';
 import 'package:soqsoq/models/product_db_repo.dart';
 import 'package:soqsoq/models/product_repo.dart';
-import '../helpers/database_helper.dart';
-import '../helpers/http_helper.dart';
 import '../models/product.dart';
 
 class ProductVm {
