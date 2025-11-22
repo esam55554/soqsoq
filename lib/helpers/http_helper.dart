@@ -38,7 +38,7 @@ class HttpHelper {
       );
       return response;
     } on DioException catch (e) {
-      rethrow;
+      throw e;
     }
   }
   // Download File
@@ -59,7 +59,7 @@ class HttpHelper {
       );
       return response;
     } on DioException catch (e) {
-      rethrow;
+      throw e;
     }
   }
   // Upload File (Multipart Request)
@@ -87,7 +87,7 @@ class HttpHelper {
       );
       return response;
     } on DioException catch (e) {
-      rethrow;
+      throw e;
     }
   }
 
@@ -122,7 +122,7 @@ class HttpHelper {
       );
       return response;
     } on DioException catch (e) {
-      rethrow;
+      throw e;
     }
   }
 
